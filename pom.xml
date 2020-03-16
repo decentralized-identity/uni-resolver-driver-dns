@@ -5,12 +5,26 @@
 	<artifactId>uni-resolver-driver-dns</artifactId>
 	<packaging>${packaging.type}</packaging>
 	<name>uni-resolver-driver-dns</name>
-
+	<version>0.1.0-SNAPSHOT</version>
 	<parent>
 		<groupId>decentralized-identity</groupId>
 		<artifactId>uni-resolver</artifactId>
-		<version>0.1-SNAPSHOT</version>
+		<version>0.1.0</version>
 	</parent>
+
+	<scm>
+		<url>https://github.com/decentralized-identity/uni-resolver-driver-dns</url>
+		<connection>scm:git:git://github.com/decentralized-identity/uni-resolver-driver-dns.git</connection>
+		<developerConnection>scm:git:git@github.com:decentralized-identity/uni-resolver-driver-dns.git</developerConnection>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub decentralized-identity uni-resolver-driver-dns</name>
+			<url>https://maven.pkg.github.com/decentralized-identity/uni-resolver-driver-dns</url>
+		</repository>
+	</distributionManagement>
 
 	<profiles>
 
@@ -86,6 +100,23 @@
 							</dependency>
 						</dependencies>
 					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-release-plugin</artifactId>
+						<version>3.0.0-M1</version>
+						<configuration>
+							<tagNameFormat>v@{project.version}</tagNameFormat>
+							<scmReleaseCommitComment>Latest Release @{releaseLabel}</scmReleaseCommitComment>
+							<pomFileName>pom.xml</pomFileName>
+						</configuration>
+						<dependencies>
+							<dependency>
+								<groupId>org.apache.maven.plugins</groupId>
+								<artifactId>maven-scm-plugin</artifactId>
+								<version>1.8.1</version>
+							</dependency>
+						</dependencies>
+					</plugin>
 				</plugins>
 			</build>
 
@@ -97,8 +128,8 @@
 		<dependency>
 			<groupId>decentralized-identity</groupId>
 			<artifactId>uni-resolver-driver</artifactId>
-			<version>0.1-SNAPSHOT</version>
-			<scope>compile</scope>
+			<version>0.1.0</version>
+
 		</dependency>
 		<dependency>
 			<groupId>dnsjava</groupId>
