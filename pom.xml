@@ -20,7 +20,7 @@
 
 	<distributionManagement>
 		<repository>
-			<id>github</id>
+			<id>github-dns</id>
 			<name>GitHub decentralized-identity uni-resolver-driver-dns</name>
 			<url>https://maven.pkg.github.com/decentralized-identity/uni-resolver-driver-dns</url>
 		</repository>
