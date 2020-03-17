@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd /opt/driver-dns/
-mvn jetty:run -P war
+mvn settings settings.xml jetty:run -P war
