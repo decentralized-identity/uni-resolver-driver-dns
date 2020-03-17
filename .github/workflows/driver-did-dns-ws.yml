@@ -11,10 +11,12 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Docker Build and Push
-      uses: philpotisk/github-action-docker-build-push@master
+      uses: danubetech/github-action-docker-build-push@master
       env:
         MAVEN_SETTINGS: ${{secrets.MAVEN_SETTINGS}}
         DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
         DOCKER_FILE: docker/Dockerfile
         CONTAINER_TAG: universalresolver/driver-did-dns:0.1.0
+        
+        
