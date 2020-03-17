@@ -7,7 +7,7 @@ MAINTAINER Markus Sabadello <markus@danubetech.com>
 
 ADD . /opt/driver-dns
 
-RUN cd /opt/driver-dns && mvn clean install package -N -DskipTests
+RUN cd /opt/driver-dns && mvn --settings settings.xml clean install package -N -DskipTests
 
 # variables
 
