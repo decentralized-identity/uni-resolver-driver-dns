@@ -13,11 +13,6 @@
           <id>github-ur</id>
           <name>GitHub decentralized-identity uni-resolver</name>
           <url>https://maven.pkg.github.com/decentralized-identity/universal-resolver</url>
-        </repository>	
-	    <repository>
-          <id>github-didcom</id>
-          <name>GitHub decentralized-identity did-common-java</name>
-          <url>https://maven.pkg.github.com/decentralized-identity/did-common-java</url>
         </repository>
         <repository>
           <id>github-dns</id>
@@ -33,11 +28,7 @@
       <username>OWNER</username>
       <password>TOKEN</password>
     </server>
-    <server>
-      <id>githubb-didcom</id>
-      <username>OWNER</username>
-      <password>TOKEN</password>
-    </server>
+
     <server>
       <id>github-dns</id>
       <username>OWNER</username>
