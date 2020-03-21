@@ -14,6 +14,8 @@ This is a [Universal Resolver](https://github.com/decentralized-identity/univers
 ```
 ssi.labs.nic.at
 ```
+## Configuration
+ For downloading the dependencies of this project a Personal Access Token for GitHub must be configured in file [settings.xml](https://github.com/decentralized-identity/uni-resolver-driver-dns/blob/master/settings.xml) according to [Creating a personal access token for the command line](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).
 
 ## Build and Run (Docker)
 
@@ -23,12 +25,7 @@ docker run -p 8080:8080 universalresolver/driver-dns
 curl -X GET http://localhost:8080/1.0/identifiers/ssi.labs.nic.at
 ```
 
-## Build (native Java)
-### Configuration
- For downloading the dependencies of this project a Personal Access Token for GitHub must be configured in file [settings.xml](https://github.com/decentralized-identity/uni-resolver-driver-dns/blob/master/settings.xml) according to [Creating a personal access token for the command line](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).
- 
- ### Build (native Java)
- 
+## Build (native Java) 
  Maven build:
 
 	mvn --settings settings.xml clean install
