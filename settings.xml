@@ -10,28 +10,18 @@
       <id>github</id>
       <repositories>
 	    <repository>
-          <id>github-ur</id>
+          <id>github-universal-resolver</id>
           <name>GitHub decentralized-identity uni-resolver</name>
           <url>https://maven.pkg.github.com/decentralized-identity/universal-resolver</url>
-        </repository>	
-        <repository>
-          <id>github-dns</id>
-          <name>GitHub decentralized-identity uni-resolver-driver-dns</name>
-          <url>https://maven.pkg.github.com/decentralized-identity/uni-resolver-driver-dns</url>
         </repository>
       </repositories>
     </profile>
   </profiles>
   <servers>
     <server>
-      <id>github-ur</id>
-      <username>OWNER</username>
-      <password>TOKEN</password>
-    </server>
-    <server>
-      <id>github-dns</id>
-      <username>OWNER</username>
-      <password>TOKEN</password>
+      <id>github-universal-resolver</id>
+      <username>${env.GITHUB_READ_PACKAGES_OWNER}</username>
+      <password>${env.GITHUB_READ_PACKAGES_TOKEN}</password>
     </server>
   </servers>
 </settings>
