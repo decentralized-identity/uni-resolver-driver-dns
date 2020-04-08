@@ -9,21 +9,21 @@
     <profile>
       <id>github</id>
       <repositories>
-	    <repository>
+        <repository>
           <id>github-universal-resolver</id>
-          <name>GitHub decentralized-identity uni-resolver</name>
+          <name>GitHub decentralized-identity/universal-resolver</name>
           <url>https://maven.pkg.github.com/decentralized-identity/universal-resolver</url>
         </repository>
       </repositories>
     </profile>
   </profiles>
   <servers>
+<!-- personal access token with permission: read:packages -->
     <server>
       <id>github-universal-resolver</id>
       <username>${env.GITHUB_READ_PACKAGES_OWNER}</username>
       <password>${env.GITHUB_READ_PACKAGES_TOKEN}</password>
     </server>
   </servers>
+
 </settings>
-
-
